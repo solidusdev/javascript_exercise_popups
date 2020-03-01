@@ -1,0 +1,100 @@
+// reset
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+// slide into view
+.view {
+    right: 3.5rem !important;
+    transition: 0.5s;
+}
+
+// center buttons
+#outer-container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    
+    #inner-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+        ul {
+            li {
+                list-style-type: none;
+                display: inline-block;
+                padding: 1.5rem;
+              
+                // gradient button one
+                &:nth-child(1) {
+                    button {
+                        background-image: linear-gradient(to bottom, #00ff00, #06a006);
+                        &:hover {
+                            background-image: linear-gradient(to bottom, #58fc58, #42bc42);
+                        }
+                    }
+                }
+                
+                // gradient button two
+                &:nth-child(2) {
+                    button {
+                        background-image: linear-gradient(to bottom, #a0a0a0, #5e5e5e);
+                        &:hover {
+                            background-image: linear-gradient(to bottom, #b2b0b0, #a3a3a3);
+                        }
+                    }
+                }
+                
+                button {
+                    padding: 0.8rem 1.5rem;
+                    border-radius: 8px;
+                    border: none;
+                    color: white;
+                    font-size: 1rem;
+                    text-transform: capitalize;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.popup-accept {
+    border: 2.5px #58fc58 solid;
+    top: 10%;
+}
+
+.popup-cancel {
+    border: 2.5px #52c4f2 solid;
+    top: 65%;
+}
+  
+.popup {
+    width: 160px;
+    height: 70px;
+    border-radius: 8px;
+    position: absolute;
+    right: -250px;
+    overflow-x: hidden;
+    transition: 0.5s;
+    
+    .center {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        
+        .message {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 100;
+        }
+    }
+}

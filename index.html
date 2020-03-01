@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button</title>
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+    </head>
+
+<body>
+    <div id="outer-container" onclick="main_function(event);">
+        <div id="inner-container">
+            <ul>
+                <li>
+                    <button id="accept">accept</button>
+                </li>
+                
+                <li>
+                    <button id="cancel">cancel</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="popup popup-accept">
+        <div class="center">
+            <p class="message">Thank You!</p>
+        </div>
+    </div>
+    
+    <div class="popup popup-cancel">
+        <div class="center">
+            <p class="message">Come Back Soon!</p>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
